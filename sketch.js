@@ -9,9 +9,9 @@ var palyer, playerBase, playerArcher;
 var baseimage;
 
 function preload() {
-  backgroundImg = loadImage("/assets/background.png");
-  baseimage = loadImage("/assets/base.png");
-  playerimage = loadImage("/assets/player.png");
+  backgroundImg = loadImage("assets/background.png");
+  baseimage = loadImage("assets/base.png");
+  playerimage = loadImage("assets/player.png");
 }
 
 function setup() {
@@ -31,11 +31,11 @@ function setup() {
 function draw() {
   background(backgroundImg);
   Engine.update(engine);
-  image(baseImage, playerBase.position.x, playerBase.position.y, 180, 150)
+  image(playerimage, playerBase.position.x, playerBase.position.y, 180, 150)
   image(playerimage, player.position.x, player.position.y, 50, 180)
   fill("#FFFF");
   textAlign("center");
   textSize(40);
   text("ARQUEIRO ÉPICO", width / 2, 100);
-  drawSprites()
+ // drawSprites()
 }
